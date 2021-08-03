@@ -15,12 +15,6 @@ export default function HomeScreen() {
         <Text style={[style.text, {margin: 10, fontSize: 20}]}>Trending</Text>
 
         <HorizontalBar />
-
-        <Text style={[style.text, {margin: 10, fontSize: 20}]}>Trending</Text>
-        <HorizontalBar />
-
-        <Text style={[style.text, {margin: 10, fontSize: 20}]}>Trending</Text>
-        <HorizontalBar />
       </ScrollView>
     </View>
   );
