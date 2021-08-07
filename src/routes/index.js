@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 //
 import SplashScreen from '../screen/SplashScreen/SplashScreen';
 import BottomNavigation from './BottomNavigation';
+import FullScreen from '../screen/FullScreen/FullScreen';
 
 export default function index() {
   const [showSplash, setShowSplash] = useState(true);
@@ -33,6 +34,14 @@ export default function index() {
         <Stack.Screen
           name="BottomNavigation"
           component={BottomNavigation}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          name="FullScreen"
+          component={FullScreen}
           options={{
             headerShown: false,
           }}
