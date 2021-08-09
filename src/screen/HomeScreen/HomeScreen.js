@@ -29,9 +29,7 @@ export default function HomeScreen() {
           if (list.total_img > 0) {
             return (
               <View key={i}>
-                <Text style={[style.text, {margin: 10, fontSize: 20}]}>
-                  {list.name}
-                </Text>
+                <Text style={style.text}>{list.name}</Text>
 
                 <HorizontalBar id={list.id} />
               </View>
@@ -57,6 +55,11 @@ const style = StyleSheet.create({
   },
   text: {
     color: '#fff',
+    margin: 10,
+    fontSize: 20,
+    fontWeight: 'bold',
+    textTransform: 'capitalize',
+    marginTop: 15,
   },
   loading: {
     fontSize: 30,
