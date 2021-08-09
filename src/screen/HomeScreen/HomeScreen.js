@@ -26,16 +26,22 @@ export default function HomeScreen() {
         <SearchBar />
 
         {category.map((list, i) => {
-          return (
-            <View key={i}>
-              <Text style={[style.text, {margin: 10, fontSize: 20}]}>
-                {list.name}
-              </Text>
+          if (list.total_img > 0) {
+            return (
+              <View key={i}>
+                <Text style={[style.text, {margin: 10, fontSize: 20}]}>
+                  {list.name}
+                </Text>
 
-              <HorizontalBar id={list.id} />
-            </View>
-          );
+                <HorizontalBar id={list.id} />
+              </View>
+            );
+          }
         })}
+
+        {category.length > 0 ? null : (
+          <Text style={style.loading}>Loading...</Text>
+        )}
 
         <View style={{height: 30}}></View>
       </ScrollView>
@@ -51,5 +57,10 @@ const style = StyleSheet.create({
   },
   text: {
     color: '#fff',
+  },
+  loading: {
+    fontSize: 30,
+    color: '#fff',
+    textAlign: 'center',
   },
 });
